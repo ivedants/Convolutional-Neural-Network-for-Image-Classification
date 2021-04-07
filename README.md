@@ -28,7 +28,7 @@ For better understanding, this array can be represented as:
 (Samples, x, y, channels) = (60000, 28, 28, 1)
 #### NOTE: For color images, the last dimension value would be 3 (as they are represented in RGB values)
 
-### Labels
+## Labels
 
 For labels, we use One-Hot Encoding which allows the representation of categorical data to be more expressive. This means that instead of having labels such as "one", "two", etc., we will have a single array for each image. Many machine learning algorithms cannot work with categorical data directly. The categories must be converted into numbers. This is required for both input and output variables that are categorical. This type of categorical variable binary representation is called one-hot, because each row has one feature with a value of 1, and the other features with value 0.
 
