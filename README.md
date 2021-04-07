@@ -6,6 +6,16 @@ This is an implementation of a Convolutional Neural Network for Image Classifica
   <img src="https://cdn-images-1.medium.com/max/1600/1*XdCMCaHPt-pqtEibUfAnNw.png" />
 </p>
 
+## Table of Contents
+
+- [About the Dataset](#about-the-dataset)
+- [Diving Deep](#diving-deep)
+- [Labels](#labels)
+- [Diving Deep into the Jupyter Notebook Code](#diving-deep-into-the-jupyter-notebook-code)
+  - [Data Pre-Processing](#data-pre-processing)
+  - [Training the Model](#training-the-model)
+  - [Evaluating the Model](#evaluating-the-model)
+
 ## About the Dataset
 
 The MNIST database (Modified National Institute of Standards and Technology database) is a large database of handwritten digits from 0 to 9 that is commonly used for training various image processing systems. The database is also widely used for training and testing in the field of machine learning. It was created by "re-mixing" the samples from NIST's original datasets.
@@ -68,3 +78,6 @@ After this, we add the Pooling Layer, followed by flattening the images from 28 
 
 The evaluation looks pretty good. The precision, recall, and F-1 scores are about 99 percent and that proves that our convolutional neural network can easily classify hand-written digits of the MNIST dataset with minimal error. 
 
+## Author
+
+Vedant Shrivastava
