@@ -45,3 +45,26 @@ After the imports, we take a look at the actual shape of the training data. So w
 <p align="center">
   <img src="https://github.com/ivedants/Convolutional-Neural-Network-for-Image-Classification/blob/main/Single%20sample.jpg" />
 </p>
+
+As we see, most of the values in the array are 0, which is actually representing the white color pixels of the image. 
+
+### Data Pre-Processing
+
+We first start with making the labels understandable for the CNN. Notice how the training data just returns 60,000 values indicating the actual number. If we feed the values this way for training our CNN, the network would probably get confused and think of the data as some sort of regression problem i.e. as if the values, say 5, 4, 0 are values on some sort of continuous scale instead of actual distinct categories. Hence, we convert them to One-Hot Encoding, as explained above. 
+
+Doing this would convert all the values of the training and test data in the array into binary values i.e. categorical data which would be much more simpler for a Neural Network to understand.
+
+In order to normalize the X data, we simply divide the values of the arrays by the max value in order to normalize this to be within 0 and 1. 
+
+In order to make this into a generalized network that can work on just any sort of image data, we reshape the data to also include color channels (we consider one color channel in this specific case).
+
+### Training the Model
+
+After pre-processing the data, we create the sequential object of the model to start off with the convolutional layer. We add the convolutional layer with the kernel size of 4 x 4 and 32 filters, which are considered good standard values for this image dataset we are working with. Then we put in the input shape values and the activation function as rectified linear unit which works quite well for CNNs. 
+
+After this, we add the Pooling Layer, followed by flattening the images from 28 x 28 to 764 pixels before the final layer. Then we add a dense layer by choosing the number of neurons in this hidden layer finally followed by an ultimate classifier layer, which would classify the images into 10 possible classes. For this, the activation function is softmax function so the output directly gives us a categorical class. 
+
+### Evaluating the Model
+
+The evaluation looks pretty good. The precision, recall, and F-1 scores are about 99 percent and that proves that our convolutional neural network can easily classify hand-written digits of the MNIST dataset with minimal error. 
+
