@@ -38,5 +38,10 @@ The label is then represented based off the index position in the label array i.
 
 As a result, the labels for the training data end up being a large 2-D array of the dimension (60000, 10). 
 
+## Diving Deep into the Jupyter Notebook Code
 
+After the imports, we take a look at the actual shape of the training data. So we get (60000, 28, 28). Right now, we don't have a color channel so we reshape this data to have a color channel. Then the next thing we do is just grab the very first sample by indexing at zero. 
 
+<p align="center">
+  <img src="" />
+</p>
